@@ -4,19 +4,15 @@ The Knapsack Problem is a well-known combinatorial optimization problem commonly
 Given a set of items, each with a weight and a value, determine the maximum value that can be obtained in a knapsack of fixed carrying capacity.
 
 ### Mathematical Formulation
-Let \( n \) be the number of items, indexed by \( i \), with \( w_i \) and \( v_i \) representing the weight and value of the \( i^{th} \) item, respectively. The knapsack has a maximum weight capacity \( W \). The objective is to maximize:
+Let $n$ be the number of items, indexed by $i$, with $w_i$ and $v_i$ representing the weight and value of the $i^{th}$ item, respectively. The knapsack has a maximum weight capacity $W$. The objective is to maximize: 
 
-\[
-\text{Objective Function: } \sum_{i=1}^{n} v_i \times x_i
-\]
+Objective Function: $\sum_{i=1}^{n} v_i \times x_i$
 
-Subject to the constraint:
+Subject to the constraint: 
+Constraint: $\sum_{i=1}^{n} w_i \times x_i \leq W$
 
-\[
-\text{Constraint: } \sum_{i=1}^{n} w_i \times x_i \leq W
-\]
 
-Here, \( x_i \) is a binary variable that is 1 if the \( i^{th} \) item is included in the knapsack and 0 otherwise.
+Here, $x_i$ is a binary variable that is 1 if the $i^{th}$ item is included in the knapsack and 0 otherwise.
 
 ### Complexity
 The Knapsack Problem is an NP-hard problem, indicating that the computational complexity increases exponentially with the number of items.
