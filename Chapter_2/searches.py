@@ -32,6 +32,8 @@ def a_star_search(graph: dict, start, end) -> list:
     parents = {}
     parents[start] = start
 
+    all_paths = []
+
     while len(open_list) > 0:
         n = None
 
@@ -117,6 +119,7 @@ def dfs(graph_to_search: dict, start: int, end: int) -> list:
     '''
     This is the function to perform depth-first search
     '''
+    graph_to_search = {k: graph_to_search[k][::-1] for k in graph_to_search}
     queue = deque([[start]])
 
     while queue:
